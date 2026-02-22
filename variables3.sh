@@ -1,5 +1,8 @@
 #!/bin/bash
-STARTTIME=$(date)
+STARTTIME=$(date %s)
 echo "Script executed at : $STARTTIME"
-ENDTIME=$(date)
+
+sleep 10 
+
+ENDTIME=$(date %s) 
 echo "Script ended at : $ENDTIME"
