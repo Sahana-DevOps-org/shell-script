@@ -6,3 +6,8 @@ NUM2=sahana
 SUM=$(($NUM1+$NUM2))
 
 echo "Sum is: $SUM"
+
+#Array
+FRUITS = ("APPLE" "BANANA" "PAPAYA")
+
+echo "Fruits are: ${FRUITS[@]}"
