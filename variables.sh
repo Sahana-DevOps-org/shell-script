@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PERSON1=sahana
+PERSON1=harsha
 PERSON2=bhavi
 
 echo "$PERSON1:: hii"
