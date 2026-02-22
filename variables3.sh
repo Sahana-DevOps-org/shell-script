@@ -1,3 +1,5 @@
 #!/bin/bash
-TIMESTAMP=$(date)
-echo "Script executed at : $TIMESTAMP"
+STARTTIME=$(date)
+echo "Script executed at : $STARTTIME"
+ENDTIME=$(date)
+echo "Script ended at : $ENDTIME"
