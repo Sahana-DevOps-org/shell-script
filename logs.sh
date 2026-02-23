@@ -1,11 +1,13 @@
 #!/bin/bash
 USERID=$(id -u)
 LOGS_FOLDER="var/log/shell-script"
+LOGS_FILE="var/log/shell-script/$0.log"
 
 if [ $USERID -ne 0 ]; then
     echo "Please run this script with rootuser access"
     exit 1
 fi
+mkdir -p $LOGS_FOLDER
 VALIDATE (){
     if [ $1 -ne 0 ]; then
         echo "installing $2 failure"
@@ -15,7 +17,7 @@ VALIDATE (){
     fi
 }
 echo "installing nginx"
-dnf install nginx -y
+dnf install nginx -y &>> $LOGS_FILE
 VALIDATE $? "Installing nginx"
-dnf install mysql -y
+dnf install mysql -y &>> $LOGS_FILE
 VALIDATE $? "Installing mysql"
