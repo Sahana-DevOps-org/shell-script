@@ -16,7 +16,7 @@ else
 fi
 
 dnf install MySQL -y
-f [ $? -ne 0 ]; then
+if [ $? -ne 0 ]; then
     echo "installing MySQL failure"
     exit 1
 else 
