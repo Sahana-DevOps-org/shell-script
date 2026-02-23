@@ -14,6 +14,7 @@ VALIDATE (){
     else 
         echo "installing $2 is success" | tee -a $LOGS_FILE
     fi
+}    
 for package in $@
 do 
     dnf install $package -y
